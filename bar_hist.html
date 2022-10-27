@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <script src="./lib/d3.v4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/demo.css">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+    <!--- W3schools - If you don't want to download and host Bootstrap yourself, you can include it from a CDN (Content Delivery Network). 
+    MaxCDN provides CDN support for Bootstrap's CSS and JavaScript. You must also include jQuery: --->
+
+</head>
+
+<body style="background-color:rgb(216, 218, 218)">
+    <ul id="nav">
+        <li><a href="./demo.html">Home</a></li>
+        <li><a href="./bar_hist.html">Barchart/Histogram</a></li>
+        <li><a href="./scatter.html">Scatter Plot</a></li>
+        <li class="topnav-right">
+            <a href="#" class="dropdownfunc">Project</a>
+            <div class="list" style="margin-left: -5%">
+            <a href="./about_data.html">Data</a>
+            <a href="./about_fifa.html">About FIFA 22</a>
+            </div>
+        </li>
+    </ul>
+
+    <div class="barhistdiv" style="margin-left: -19%;">
+        <center><b>Select a feature: </b>
+        <select id="barhistselect">
+            <option disabled selected value> -- select an option -- </option>
+            <option value="Age">Age</option>
+            <option value="Height">Height</option>
+            <!-- <option value="Weight">Weight</option> -->
+            <option value="Overall">Overall</option>
+            <option value="Potential">Potential</option>
+            <option value="ValueEUR">Player's Value in Euro</option>
+            <option value="WageEUR">Player's weekly wage in Euro</option>
+            <option value="PaceTotal">PaceTotal</option>
+            <option value="ShootingTotal">Shooting</option>
+            <option value="PassingTotal">Passing</option>
+            <option value="DribblingTotal">Dribbling</option>
+            <option value="Crossing">Crossing</option>
+            <option value="Finishing">Finishing</option>
+            <option value="Jumping">Jumping</option>
+            <option value="Stamina">Stamina</option>
+            <option value="Vision">Vision</option>
+            <option value="BallControl">BallControl</option>
+            <option value="FKAccuracy">FKAccuracy</option> 
+            <option value="Penalties">Penalties</option>
+            <!-- <option value="Name">Name</option> --> <!-- every players name are unique so no point to plot barchart -->
+            <option value="BestPosition">BestPosition of Every Player</option>
+            <option value="Club">Club</option>
+            <option value="Nationality">Nationality</option>
+            <option value="PreferredFoot">Preferred Foot</option>
+            <option value="SkillMoves">Skill Moves</option>     
+        </select></center>
+    </div>
+
+    <!-- <div class="toggle" style="margin-right: 20%;">
+        <form id="frm">
+            <label><b>Orientation:</b></label>
+            <label><a href="#" class="toggle" orientation="vertical" value="vertical">Vertical</a></label>
+            <label><a href="#" class="toggle" orientation="horizontal" value="horizontal">Horizontal</a></label>
+        </form>
+    </div> -->
+    <label class="switch">
+        <input id="toggle_bar" type="checkbox" class="toogle">
+        <span class="slider round"></span>
+    </label>
+
+
+    <script src="./app.js"></script>
+    <script src="./histogram.js"></script>
+    <script src="./barchart.js"></script>
+
+</body>
+
+</html>
